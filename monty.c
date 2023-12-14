@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "monty.h"
-
+vars var;
 /**
  * main - Entry point for the Monty interpreter.
  * @ac: Number of command-line arguments.
@@ -12,7 +12,6 @@
 
 int main(int ac, char **av)
 {
-	vars var;
 	char *opcode;
 
 	if (ac != 2)
