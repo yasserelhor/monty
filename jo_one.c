@@ -53,7 +53,7 @@ void add(stack_t **stack, unsigned int line_number)
 void sub(stack_t **stack, unsigned int line_number)
 {
 	int result;
-	
+
 	if (!*stack || !(*stack)->next)
 	{
 		fprintf(stderr, "L%u: can't sub, stack too short\n", line_number);

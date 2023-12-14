@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "monty.h"
-vars var;
 
 /**
  * main - Entry point for the Monty interpreter.
@@ -10,8 +9,10 @@ vars var;
  * @av: Array of command-line argument strings.
  * Return: EXIT_SUCCESS on success, EXIT_FAILURE on failure.
  */
+
 int main(int ac, char **av)
 {
+	vars var;
 	char *opcode;
 
 	if (ac != 2)
