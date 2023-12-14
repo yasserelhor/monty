@@ -13,7 +13,7 @@ vars var;
 
 int main(int ac, char **av)
 {
-	char *opcode;
+	char *jo;
 
 	if (ac != 2)
 	{
@@ -39,9 +39,9 @@ int main(int ac, char **av)
 
 	while (getline(&var.buff, &var.tmp, var.file) != EOF)
 	{
-		opcode = strtok(var.buff, " \r\t\n");
-		if (opcode != NULL)
-			if (call_funct(&var, opcode) == EXIT_FAILURE)
+		jo = strtok(var.buff, " \r\t\n");
+		if (jo != NULL)
+			if (call_funct(&var, jo) == EXIT_FAILURE)
 			{
 				free_all();
 				return (EXIT_FAILURE);
