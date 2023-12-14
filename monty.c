@@ -3,6 +3,7 @@
 #include <stdlib.h>
 #include "monty.h"
 vars var;
+
 /**
  * main - Entry point for the Monty interpreter.
  * @ac: Number of command-line arguments.
@@ -23,13 +24,18 @@ int main(int ac, char **av)
 	if (start_vars(&var) != 0)
 		return (EXIT_FAILURE);
 
+
 	var.file = fopen(av[1], "r");
+
 	if (!var.file)
 	{
 		fprintf(stderr, "Error: Can't open file %s\n", av[1]);
 		free_all();
+
 		return (EXIT_FAILURE);
 	}
+
+
 
 	while (getline(&var.buff, &var.tmp, var.file) != EOF)
 	{
@@ -40,6 +46,7 @@ int main(int ac, char **av)
 				free_all();
 				return (EXIT_FAILURE);
 			}
+
 		var.line_number++;
 	}
 
